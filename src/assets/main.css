@@ -1,0 +1,31 @@
+@import './color.css';
+@import url('./base') layer(base);
+@import './width.css';
+
+@layer base main;
+@layer main {
+  #app {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1640px;
+    font-weight: normal;
+    /* padding: 2rem; */
+  }
+
+  a {
+    text-decoration: none;
+    transition: 0.4s;
+    color:var(--ax-b-text)
+    /* padding: 3px; */
+  }
+  img {
+    /* vertical-align: top; */
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      background-color:red;
+      color:green;
+    }
+  }
+}

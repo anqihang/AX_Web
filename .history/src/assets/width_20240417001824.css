@@ -1,0 +1,41 @@
+@media only screen and (max-width: 640px) {
+  #IndexView {
+    margin: 0 10px;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  #IndexView {
+    margin: 0 10px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 14409px) {
+  #IndexView {
+    margin: 0 20px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+  #IndexView {
+    margin: 0 20px;
+  }
+}
+@media only screen and (min-width: 1680px) and (max-width: 1920px) {
+  #IndexView {
+    margin: 0 40px;
+  }
+}
+// 27寸
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {
+  #IndexView {
+    margin: 0 40px;
+  }
+}
+@media only screen and (min-width: 2560px) and (max-width: 3840px) {
+  #IndexView {
+    margin: 0 80px;
+  }
+}
+@media only screen and (min-width: 3840px) and (max-width: 5120px) {
+  #IndexView {
+    margin: 0 80px;
+  }
+}

@@ -1,0 +1,32 @@
+<!--
+ * @Author: 安琦航 anqihang0106@outlook.com
+ * @Date: 2024-04-09 22:28:56
+-->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="安琦航" />
+    <title>AX安许</title>
+  </head>
+  <body>
+    <div id="app" ref="app"></div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+  <script>
+    /**
+     * @description 适配暗黑模式，修改html的class
+     */
+    const html = document.querySelector('html');
+    const schemeDark = window.matchMedia('(prefers-color-scheme: dark)');
+    schemeDark.addEventListener('change', (event) => {
+      // event.matches为true时是 亮 主题
+      event.matches
+        ? (html.classList.add('dark'), html.classList.remove('light'))
+        : (html.classList.remove('dark'), html.classList.add('light'));
+    });
+  </script>
+</html>

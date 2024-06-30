@@ -1,0 +1,23 @@
+<!--
+ * @Author: 安琦航 anqihang0106@outlook.com
+ * @Date: 2024-04-14 23:48:33
+ *
+ * @description 主页面视图
+-->
+<template>
+  <div id="IndexView" ref="index">
+    <header class="w-full fixed top-0 left-0">
+      <!-- 顶部导航栏 -->
+      <TopNavigationComponent />
+    </header>
+    <main class="min-h-screen">
+      <RouterView class="" />
+    </main>
+  </div>
+</template>
+
+<script setup lang="ts">
+import TopNavigationComponent from '@/components/TopNavigationComponent.vue';
+</script>
+
+<style scoped></style>
