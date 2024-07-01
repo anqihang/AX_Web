@@ -22,11 +22,15 @@
      */
     const html = document.querySelector('html');
     const schemeDark = window.matchMedia('(prefers-color-scheme: dark)');
-    schemeDark.addEventListener('change', (event) => {
-      // event.matches为true时是 亮 主题
-      event.matches
-        ? (html.classList.add('dark'), html.classList.remove('light'))
-        : (html.classList.remove('dark'), html.classList.add('light'));
-    });
+    schemeDark.addEventListener(
+      'change',
+      (event) => {
+        // event.matches为true时是 亮 主题
+        event.matches
+          ? (html.classList.add('dark'), html.classList.remove('light'))
+          : (html.classList.remove('dark'), html.classList.add('light'));
+      }
+      // { passive: true }
+    );
   </script>
 </html>

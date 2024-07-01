@@ -29,6 +29,9 @@
   #TopNavigationComponent {
     padding: 0 20px;
   }
+  #IndexView{
+    max-width:1640px;
+  }
 }
 @media only screen and (min-width: 1680px) and (max-width: 1920px) {
   main {
@@ -36,6 +39,9 @@
   }
   #TopNavigationComponent {
     padding: 0 40px;
+  }
+  #IndexView{
+    max-width:1640px;
   }
 }
 // 27寸
@@ -46,6 +52,9 @@
   #TopNavigationComponent {
     padding: 0 40px;
   }
+  #IndexView{
+    max-width:1640px;
+  }
 }
 @media only screen and (min-width: 2560px) and (max-width: 3840px) {
   main {
@@ -54,6 +63,9 @@
   #TopNavigationComponent {
     padding: 0 80px;
   }
+  #IndexView{
+    max-width:1640px;
+  }
 }
 @media only screen and (min-width: 3840px) and (max-width: 5120px) {
   main {
@@ -61,5 +73,8 @@
   }
   #TopNavigationComponent {
     padding: 0 80px;
+  }
+  #IndexView{
+    max-width:1640px;
   }
 }

@@ -15,8 +15,17 @@
     <div class="bg-red h-full w-full flex justify-end">
       <div class="">
         <nav class="h-full bg-green flex justify-around items-center" @click="f_routeTo">
-          <a href="#" class="bg-yellow" data-path="/game">游戏</a>
-          <a href="#" class="bg-yellow" data-path="/tool">工具</a>
+          <!-- <a href="#" class="bg-yellow" data-path="/game">游戏</a> -->
+          <!-- <a href="#" class="bg-yellow" data-path="/tool">工具</a> -->
+          <a
+            href="#"
+            class="bg-yellow"
+            :data-path="navMenu.path"
+            v-for="(navMenu, index) in useNavMenuStore().navMenuComp"
+            :key="navMenu.path + index"
+          >
+            {{ navMenu.title }}
+          </a>
         </nav>
       </div>
       <div class="w-[4px] h-full py-6 mx-2 scale-x-50">
@@ -34,7 +43,7 @@
       </div>
       <!-- 图标 -->
       <div class="h-full bg-green flex items-center">
-        <div class="w-6 aspect-square bg-yellow"></div>
+        <div @click="useNavMenuStore().f_getNavMenu()" class="w-6 aspect-square bg-yellow"></div>
         <div class="w-6 aspect-square bg-yellow m-2"></div>
         <div class="w-6 aspect-square bg-yellow"></div>
       </div>
@@ -43,18 +52,20 @@
 </template>
 
 <script setup lang="ts">
+import { useNavMenuStore } from '@/stores/navMenu/store_navMenu';
+
 defineOptions({
   name: 'topNav'
 });
+
 const router = useRouter();
 // 路由跳转
 /**
  * @description 路由跳转
- * @param e {Event}
+ * @param  {Event} e
  */
 function f_routeTo(e: Event) {
-  if (!e.target) return;
-  e.preventDefault();
+  e.preventDefault(); // 阻止默认行为
   // 路由跳转
   console.info('跳转', (e.target as HTMLAnchorElement).dataset.path);
   router.push({ path: (e.target as HTMLAnchorElement).dataset.path });

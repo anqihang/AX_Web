@@ -16,7 +16,7 @@ declare module '@vue/runtime-core' {
     g_bodyScroll: number; // 1 向下滚动 0 向上滚动
   }
 }
-// vite 配置
+
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_PLATFORM: string;
