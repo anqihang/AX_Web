@@ -4,6 +4,7 @@
   --ax-b-black-theme:#09090b;
 
   --ax-b-white: #ffffff;
+  --ax-b-white-theme:#f2f2f2;
 
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
@@ -23,6 +24,10 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--ax-b-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  /* 主题色 */
+  --ax-theme-text:#ffffff;
+  --ax-theme-bg:#09090b;
 }
 
 /* semantic color variables for this project */

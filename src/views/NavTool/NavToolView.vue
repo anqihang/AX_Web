@@ -18,7 +18,7 @@
         <div class="title">tldraw</div>
       </div>
       <div class="item">
-        <img src="/public/images/wordmark.jpg" alt="画板" />
+        <img src="/images/wordmark.jpg" alt="画板" />
         <div class="title">volta</div>
       </div>
     </section>
@@ -36,7 +36,6 @@
     border-radius: 4px;
     justify-self: center;
     display: flex;
-    // justify-content: center;
     align-items: center;
     padding: 12px;
     img {

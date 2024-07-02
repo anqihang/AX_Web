@@ -33,19 +33,20 @@
       </div>
       <!-- 主题切换 -->
       <div
-        class="lightDarkSwitch w-10 bg-green flex justify-center items-center"
+        id="lightDarkSwitch"
+        class="w-10 bg-green flex justify-center items-center"
         @click="f_switchLD"
       >
         <div>light</div>
       </div>
       <div class="w-[4px] h-full py-6 mx-2 scale-x-50">
-        <div class="w-full h-full bg-black"></div>
+        <div class="w-full h-full text-theme"></div>
       </div>
       <!-- 图标 -->
       <div class="h-full bg-green flex items-center">
-        <div @click="useNavMenuStore().f_getNavMenu()" class="w-6 aspect-square bg-yellow"></div>
-        <div class="w-6 aspect-square bg-yellow m-2"></div>
-        <div class="w-6 aspect-square bg-yellow"></div>
+        <div class="w-6 h-auto aspect-square bg-yellow i-mdi:github"></div>
+        <div class="w-6 h-auto aspect-square bg-yellow ml-2 i-mdi:qqchat"></div>
+        <div class="w-6 h-auto aspect-square bg-yellow ml-2"></div>
       </div>
     </div>
   </div>
@@ -58,15 +59,14 @@ defineOptions({
   name: 'topNav'
 });
 
-const router = useRouter();
 // 路由跳转
+const router = useRouter();
 /**
  * @description 路由跳转
  * @param  {Event} e
  */
 function f_routeTo(e: Event) {
   e.preventDefault(); // 阻止默认行为
-  // 路由跳转
   console.info('跳转', (e.target as HTMLAnchorElement).dataset.path);
   router.push({ path: (e.target as HTMLAnchorElement).dataset.path });
 }

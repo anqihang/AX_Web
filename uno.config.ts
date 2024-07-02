@@ -4,19 +4,42 @@
  */
 // uno.config.ts
 // import transformerVariantGroup from '@unocss/transformer-variant-group'// 分组
-// import transformerDirectives from '@unocss/transformer-directives'// 变体指令
-import { defineConfig, transformerDirectives, transformerVariantGroup } from 'unocss';
+// import transformerDirectives from '@unocss/transformer-directives'//@apply等指令
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup
+} from 'unocss';
 export default defineConfig({
   // ...UnoCSS options
-  // presets: [
-  //   // presetIcons({
-  //   //   /* options */
-  //   //   // extraProperties: {
-  //   //   // display: 'inline-block',
-  //   //   // 'vertical-align': 'middle'
-  //   //   // ...
-  //   //   // }
-  //   // })
-  // ],
-  transformers: [transformerVariantGroup(), transformerDirectives()]
+  presets: [
+    presetUno(),
+    //icon-图标
+    presetIcons({
+      /* options */
+      extraProperties: {
+        display: 'inline-block',
+        'vertical-align': 'middle'
+      }
+    }),
+    //attributify-属性化
+    presetAttributify({
+      /* preset options */
+    })
+  ],
+  transformers: [transformerVariantGroup(), transformerDirectives()],
+  // 主题
+  theme: {
+    color: {
+      theme: 'var(--ax-theme-text)'
+      // 'bg-theme': 'var(--ax-theme-bg)'
+    },
+    // 断点-垂直
+    breakpoints: {},
+    // 水平
+    verticalBreakpoints: {}
+  }
 });

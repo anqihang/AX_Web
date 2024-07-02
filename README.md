@@ -67,10 +67,14 @@ npm run test:e2e -- --debug
 npm run lint
 ```
 
-# NPM
+# BUN
 
+- vite
+- vite-plus-devtools
+- vueuse 工具库
 - unocss css
 - iconify 图标库
 - axios/redaxios 请求库
 - lodash-es/radash 工具库
 - unplugin-auto-import 自动导入
+- date-fns 日期库
